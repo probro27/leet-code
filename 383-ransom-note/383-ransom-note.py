@@ -5,11 +5,11 @@ class Solution:
         indexTable = {}
         
         for i in ransomNote:
-            if i in indexTable.keys():
-                indexTable[i] += 1
-            else:
-                indexTable[i] = 1
+            indexTable[i] = 0
         
+        for i in ransomNote:
+            indexTable[i] += 1
+            
         for j in magazine:
             if j in indexTable.keys():
                 if indexTable[j] != 0:
